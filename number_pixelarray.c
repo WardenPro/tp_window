@@ -1,0 +1,26 @@
+/*
+ * E89 Pedagogical & Technical Lab
+ * project:     tp_window_git/
+ * created on:  Wed May 17 19:42:23 2023
+ * 1st author:  user
+ * description: number_pixelarray.c
+*/
+
+#include <lapin.h> // For all bunny_ things
+#include <unistd.h> // For usleep
+#include <stdlib.h> // For EXIT_SUCCESS
+
+void number_pixelarray(t_bunny_pixelarray *pxa)
+{
+    int width = pxa->clipable.clip_width;
+    int height = pxa->clipable.clip_height;
+    int px = width * height;
+    int i = 0;
+    unsigned int *tmp =  (unsigned int *) pxa -> pixels;
+    while(i <= px)
+        {
+            tmp[i] = i;
+            i = i + 1;
+        }
+
+}
